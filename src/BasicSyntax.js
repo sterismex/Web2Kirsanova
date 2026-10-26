@@ -15,7 +15,6 @@ function romanToInteger(s) {
         const currentVal = romanMap[s[i]];
         const nextVal = romanMap[s[i + 1]];
 
-        // Если текущее значение меньше следующего, вычитаем его
         if (nextVal && currentVal < nextVal) {
             result -= currentVal;
         } else {
@@ -25,6 +24,4 @@ function romanToInteger(s) {
 
     return result;
 }
-
-// ВАЖНО: Добавьте эту строку, чтобы тест смог импортировать функцию
 export { romanToInteger };
